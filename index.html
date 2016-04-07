@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<table class="table table-condensed">
+  <thead><tr>
+    <td>#</td>
+    <td>Icon</td>
+    <td>URL</td>
+    <td>Markdown</td>
+  </tr></thead>
+  <tbody>
+{% for sfile in site.static_files %}
+  {% if sfile.path contains '/icons/' %}
+  <tr>
+    <td>{{ forloop.index }}</td>
+    <td><img src="{{ sfile.path }}"></td>
+    <td><a href="{{ site.url }}{{ sfile.path }}">{{ site.url }}{{ sfile.path }}</a></td>
+    <td><code>![]({{ site.url }}{{ sfile.path }})</code></td>
+  </tr>
+  {% endif %}
+{% endfor %}
+  </tbody>
+</table>
