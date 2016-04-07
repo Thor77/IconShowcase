@@ -8,3 +8,7 @@ Usage
 * Put your icons inside `icons/`
 * Run `jekyll build`
 * Move `_site` somewhere
+
+Screenshot
+==========
+![screenshot](screenshot.png)
